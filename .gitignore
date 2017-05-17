@@ -1,0 +1,12 @@
+node_modules
+coverage
+/npm-debug.log
+.node_repl_history
+.npm
+.npmrc
+/.tmp/
+/.idea/
+eslintrc
+variations
+.idea
+build

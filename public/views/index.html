@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>My Places</title>
+	<meta name="description" content=">My Places">
+	<meta name="author" content="Lana Petkovic">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="../style.css">
+	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>My Places</h1>
+	</header>
+
+	<section>
+		<div class="mdl-card my-places">
+			<div class="mdl-card__title">
+				<h3>Show My Places!</h3>
+			</div>
+			<div class="mdl-card__supporting-text">
+				Show me the places I saved before along with comments
+			</div>
+			<div class="mdl-card__actions">
+				<form action="" id="get-my-places">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">My Places</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="mdl-card new-places">
+			<div class="mdl-card__title">
+				<h3>Find new places!</h3>
+			</div>
+			<div class="mdl-card__actions">
+				<form action="" id="get-new-places">
+					<div>
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="search-type">
+							<input type="checkbox" id="search-type" class="mdl-switch__input">
+							<span class="mdl-switch__label"></span>
+						</label>
+					</div>
+					<div id="nearby-search">
+						<div class="mdl-card__supporting-text">
+							Find new places, by typing a single keyword and selecting radius
+						</div>
+						<div class="mdl-textfield mdl-js-textfield">
+							<input class="mdl-textfield__input" type="text" id="nearby-query">
+							<label class="mdl-textfield__label" for="nearby-query">Keyword...</label>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield">
+							<select id="range-select">
+								<option value="250">250m</option>
+								<option value="500">500m</option>
+								<option value="1000">1km</option>
+								<option value="2500">2.5km</option>
+								<option value="5000">5km</option>
+								<option value="10000">10km</option>
+							</select>
+							<label class="mdl-textfield__label" for="range-select">Select radius</label>
+						</div>
+					</div>
+					<div id="text-search">
+						<div class="mdl-card__supporting-text">
+							Find new places, by typing a phrase - something like: pizza in Belgrade, museums in London, etc...
+						</div>
+						<div class="mdl-textfield mdl-js-textfield">
+							<input class="mdl-textfield__input" type="text" id="text-query">
+							<label class="mdl-textfield__label" for="text-query">Search Query...</label>
+						</div>
+					</div>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Find!</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section id="search-results"></section>
+	<script src="../build/bundle.js"></script>
+</body>
+
+</html>
